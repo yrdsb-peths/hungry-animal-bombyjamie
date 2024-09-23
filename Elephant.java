@@ -9,11 +9,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Elephant extends Actor
 {
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
-    GreenfootImage[] idle = new GreenfootImage[8];
+    GreenfootImage[] idleRight = new GreenfootImage[8];
+    GreenfootImage[] idleLeft = new GreenfootImage[8];
+    String facing = "right";
     public Elephant() {
         
-        for(int i = 0; i < idle.length; i++) {
-            idle[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+        for(int i = 0; i < idleRight.length; i++) {
+            idleRight[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+            idleRight[i].scale(100, 100);
+        }
+        
+        for(int i = 0; i < idleLeft.length; i++) {
+            idleLeft[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+            idleLeft[i].scale(100, 100);
         }
         setImage(idle[0]);
     }
