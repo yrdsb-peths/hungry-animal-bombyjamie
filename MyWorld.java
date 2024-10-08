@@ -21,6 +21,7 @@ public class MyWorld extends World
         addObject(scoreLabel,20,25);
         
         createApple();
+        createCherry();
     }
     
     public void gameOver() {
@@ -36,6 +37,12 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(apple, x, y);
+    }
+    public void createCherry() {
+        Cherry cherry = new Cherry();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(cherry, x, y);
     }
     
 }

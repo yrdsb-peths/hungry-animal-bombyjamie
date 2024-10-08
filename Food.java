@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Apple extends Food
+public class Food extends Actor
 {
     /**
      * Act - do whatever the Apple wants to do. This method is called whenever
@@ -14,17 +14,10 @@ public class Apple extends Food
      */
     public void act()
     {
-        move();
         
-        MyWorld world = (MyWorld) getWorld();
-        if(getY() >= world.getHeight()) {
-            world.gameOver();
-            world.removeObject(this);
-        }
     }
+    
     public void move() {
-        int x = getX();
-        int y = getY() + 2;
-        setLocation(x,y);
+        
     }
 }
